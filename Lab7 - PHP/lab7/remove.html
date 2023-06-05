@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delete User</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Remove User</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" /><br />
+
+    <button id="deleteBtn">Delete User</button>
+
+    <div id="deleteResult"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#deleteBtn").on("click", function () {
+          var username = $("#username").val();
+          deleteUser(username);
+        });
+      });
+    </script>
+  </body>
+</html>

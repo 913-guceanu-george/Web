@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Lookup</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>User Lookup</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" />
+    <button id="lookupBtn">Lookup</button>
+
+    <div id="userDetails"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#lookupBtn").on("click", function () {
+          var name = $("#name").val();
+          lookupUser(name);
+        });
+      });
+    </script>
+  </body>
+</html>

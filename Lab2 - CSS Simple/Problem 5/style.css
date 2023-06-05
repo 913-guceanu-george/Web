@@ -1,0 +1,15 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table tr td:hover {
+  opacity: 0.5;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Management</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>User Management</h1>
+
+    <ul>
+      <li>
+        <button>
+          <a href="add.html">Add User</a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="update.html">Update User</a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="lookup.html">Lookup User</a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="remove.html">Remove User</a>
+        </button>
+      </li>
+    </ul>
+    <label for="roleFilter">Filter by Role:</label>
+    <select id="roleFilter">
+      <option value="">All Roles</option>
+      <option value="admin">Admin</option>
+      <option value="manager">Manager</option>
+      <option value="employee">Employee</option>
+    </select>
+    <script>
+      $(document).ready(function () {
+        // Load all users initially
+        fetchUsers("");
+
+        // Handle role filter change event
+        $("#roleFilter").on("change", function () {
+          var selectedRole = $(this).val();
+          fetchUsers(selectedRole);
+        });
+      });
+    </script>
+
+    <div id="userList"></div>
+  </body>
+</html>
