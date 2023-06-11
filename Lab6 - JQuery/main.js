@@ -10,12 +10,10 @@ $(document).ready(function () {
   $(".desktop").click(function () {
     var nextDesktop = (currentDesktop + 1) % numDesktops;
     currentDesktop++;
-    var currentLeft = currentDesktop * -desktopWidth;
-    var nextLeft = nextDesktop * -desktopWidth;
 
     // Make the current desktop inactive and the next one active
-    // $(".desktop").eq(currentDesktop).removeClass("active").addClass("inactive");
-    // $(".desktop").eq(nextDesktop).removeClass("inactive").addClass("active");
+    $(".desktop").eq(currentDesktop).removeClass("active").addClass("inactive");
+    $(".desktop").eq(nextDesktop).removeClass("inactive").addClass("active");
 
     // Slide current desktop out
     $(".desktop")
