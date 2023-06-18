@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Update User</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" [(ngModel)]="username" /><br />
+    <label for="password">New Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" /><br />
+    <!-- Add more input fields for other user information -->
+
+    <button (click)="updateUser()">Update User</button>
+
+    <div id="updateResult">{{ updateResponse }}</div>
+  </body>
+</html>

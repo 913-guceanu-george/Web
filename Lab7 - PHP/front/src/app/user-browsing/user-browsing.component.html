@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>User Browsing</h1>
+    <label for="roleFilter">Filter by Role:</label>
+    <select id="roleFilter" [(ngModel)]="selectedRole" (change)="fetchUsers()">
+      <option value="">All Roles</option>
+      <option value="admin">Admin</option>
+      <option value="manager">Manager</option>
+      <option value="employee">Employee</option>
+    </select>
+
+    <div id="userList">
+      <div *ngfor="let user of users">
+        <p>{{ user.name }} - {{ user.role }}</p>
+      </div>
+    </div>
+  </body>
+</html>
